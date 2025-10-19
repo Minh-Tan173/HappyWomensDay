@@ -1011,7 +1011,7 @@
             let contentLetter = document.querySelector('.contentLetter');
             switch (friend) {
                 case 'Hue':
-                    photoElement.src = 'https://picsum.photos/200/300?grayscale';
+                    photoElement.src = './image/hue.jpg';
                     contentLetter.textContent = "Hôm nay là ngày 20/10. Xin gửi lời chúc tới bạn thân Huê. Luôn vui vẻ, luôn hạnh phúc và luôn may mắn trong cuộc sống, ngày càng xinh đẹp. Chúc bạn có một ngày 20/10 thật đặc biệt! Love You 💗";
                     break;
                 case 'Oanh':
@@ -1167,41 +1167,33 @@
                 indexText++;
                 setTimeout(textCharLetter, 100);
             } else {
-                clearInterval(timoutTextLetter);
-                setTimeout(() => {
-                    funcTimeoutLetterContent()
-                }, 500)
+                clearTimeout(timoutTextLetter);
             }
         }
-        function funcTimeoutLetter() {
-            indexText = 0; // Reset indexText
-            textLetter.textContent = ''; // Xóa nội dung hiện tại của textLetter
-            clearInterval(timoutTextLetter);
-            timoutTextLetter = setInterval(() => {
-                textCharLetter();
-            }, 200)
+
+        function startTextAnimation() {
+            indexText = 0;
+            textLetter.textContent = '';
+            timoutTextLetter = setTimeout(textCharLetter, 100);
         }
 
         // chữ của thư bạn muốn gửi
         let indexTextContent = 0;
         let textLetterContent = document.querySelector('.contentLetter');
         let timoutTextLetterContent;
+
         function textCharLetterContent() {
             if (indexTextContent < textLetterContent.textContent.length) {
                 indexTextContent++;
                 setTimeout(textCharLetterContent, 1);
-            } else {
-                clearInterval(timoutTextLetterContent)
             }
         }
-        function funcTimeoutLetterContent() {
-            indexTextContent = 0; // Reset indexTextContent
-            textLetterContent.textContent = ''; // Xóa nội dung hiện tại của textLetter
-            clearInterval(timoutTextLetterContent);
-            timoutTextLetterContent = setInterval(() => {
-                textCharLetterContent();
-            }, 100)
+
+        function startContentAnimation() {
+            indexTextContent = 0;
+            timoutTextLetterContent = setTimeout(textCharLetterContent, 1);
         }
+
         $(document).ready(function () {
             $('.valentines').mouseenter(function () {
                 $('.card').stop().animate({
@@ -1215,7 +1207,8 @@
 
             $('.card').click(function () {
                 $('.wrapperLetterForm').fadeIn();
-                funcTimeoutLetter();
+                startTextAnimation();
+                startContentAnimation();
             });
 
             $('.fa-xmark').click(function () {
