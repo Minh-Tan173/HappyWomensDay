@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap-grid.min.css"
         integrity="sha512-JQksK36WdRekVrvdxNyV3B0Q1huqbTkIQNbz1dlcFVgNynEMRl0F8OSqOGdVppLUDIvsOejhr/W5L3G/b3J+8w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
@@ -27,9 +26,7 @@
             width: 50%;
             height: 50%;
         }
-    </style>
 
-    <style>
         * {
             margin: 0;
             padding: 0;
@@ -56,8 +53,7 @@
         }
 
         @keyframes up {
-            0%,
-            100% {
+            0%, 100% {
                 transform: translateY(0);
             }
             50% {
@@ -150,14 +146,10 @@
 
         .hearts {
             position: absolute;
-            top: 0
+            top: 0;
         }
 
-        .one,
-        .two,
-        .three,
-        .four,
-        .five {
+        .one, .two, .three, .four, .five {
             background-color: red;
             display: inline-block;
             height: 10px;
@@ -168,16 +160,11 @@
             top: 50px;
         }
 
-        .one:before,
-        .one:after,
-        .two:before,
-        .two:after,
-        .three:before,
-        .three:after,
-        .four:before,
-        .four:after,
-        .five:before,
-        .five:after {
+        .one:before, .one:after,
+        .two:before, .two:after,
+        .three:before, .three:after,
+        .four:before, .four:after,
+        .five:before, .five:after {
             content: "";
             background-color: red;
             border-radius: 50%;
@@ -186,20 +173,12 @@
             width: 10px;
         }
 
-        .one:before,
-        .two:before,
-        .three:before,
-        .four:before,
-        .five:before {
+        .one:before, .two:before, .three:before, .four:before, .five:before {
             top: -5px;
             left: 0;
         }
 
-        .one:after,
-        .two:after,
-        .three:after,
-        .four:after,
-        .five:after {
+        .one:after, .two:after, .three:after, .four:after, .five:after {
             left: 5px;
             top: 0;
         }
@@ -276,8 +255,7 @@
         }
 
         @keyframes scale {
-            0%,
-            100% {
+            0%, 100% {
                 transform: scaleX(1);
             }
             50% {
@@ -306,27 +284,15 @@
         }
 
         @keyframes hover {
-            0% {
-                margin-top: 60px;
-            }
-            50% {
-                margin-top: 50px;
-            }
-            100% {
-                margin-top: 60px;
-            }
+            0% { margin-top: 60px; }
+            50% { margin-top: 50px; }
+            100% { margin-top: 60px; }
         }
 
         @keyframes glow {
-            0% {
-                box-shadow: 0 0 25px 0 #e8b2ca;
-            }
-            50% {
-                box-shadow: 0 0 45px 0 #e8b2ca;
-            }
-            100% {
-                box-shadow: 0 0 25px 0 #e8b2ca;
-            }
+            0% { box-shadow: 0 0 25px 0 #e8b2ca; }
+            50% { box-shadow: 0 0 45px 0 #e8b2ca; }
+            100% { box-shadow: 0 0 25px 0 #e8b2ca; }
         }
 
         @keyframes fall {
@@ -336,14 +302,9 @@
                 transform: rotate(55deg) scale(0.9, 0.95) skew(-18deg);
                 opacity: 0.9;
             }
-            30% {
-                left: 90px;
-            }
-            55% {
-                left: 130px;
-            }
-            60%,
-            100% {
+            30% { left: 90px; }
+            55% { left: 130px; }
+            60%, 100% {
                 top: 380px;
                 transform: rotate(30deg) scale(0.9, 0.95) skew(-32deg);
                 opacity: 0;
@@ -368,23 +329,15 @@
             }
         }
 
-        /* Hiệu ứng fade-in cho ảnh thư */
         @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: scale(0.9);
-            }
-            to {
-                opacity: 1;
-                transform: scale(1);
-            }
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
         }
 
         .fade-in {
             animation: fadeIn 0.5s ease-in-out forwards;
         }
-    </style>
-    <style>
+
         svg {
             width: 80%;
             display: block;
@@ -405,13 +358,13 @@
 
         p {
             position: absolute;
-            z-index: 2
+            z-index: 2;
         }
 
         label {
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
-            opacity: .8
+            opacity: .8;
         }
 
         .letters {
@@ -606,8 +559,7 @@
             border-radius: 10px;
         }
 
-        .mewmew1,
-        .mewmew2 {
+        .mewmew1, .mewmew2 {
             position: absolute;
             width: 90px;
         }
@@ -622,13 +574,11 @@
             right: 0;
         }
 
-        .mewmew1 img,
-        .mewmew2 img {
+        .mewmew1 img, .mewmew2 img {
             width: 100%;
             border-radius: 10px;
         }
 
-        /* Style cho điều khiển nhạc */
         .music-control {
             position: fixed;
             bottom: 20px;
@@ -651,10 +601,7 @@
         .music-control button:hover {
             background: #FF3333;
         }
-    </style>
 
-    <!-- Style cho bảng lựa chọn - scene riêng biệt -->
-    <style>
         .selection-modal {
             display: flex;
             position: fixed;
@@ -738,8 +685,7 @@
     </style>
 </head>
 
-<body onload="showSelectionModal(); document.getElementById('backgroundMusic').play();">
-    <!-- Scene bảng lựa chọn -->
+<body onload="showSelectionModal();">
     <div class="selection-modal" id="selectionModal">
         <div class="selection-box">
             <h3>Chọn bạn nhận thư:</h3>
@@ -749,15 +695,13 @@
         </div>
     </div>
 
-    <!-- Nhạc nền -->
-    <audio id="backgroundMusic" src="./background_music.mp3" loop></audio>
+    <audio id="backgroundMusic" src="./background_music.mp3" loop autoplay></audio>
     <div class="music-control">
         <button onclick="document.getElementById('backgroundMusic').pause();"><i class="fas fa-pause"></i></button>
         <button onclick="document.getElementById('backgroundMusic').play();"><i class="fas fa-play"></i></button>
     </div>
 
-    <svg style="display: none;" id="theSvg" viewBox="-120 -30 240 180" enable-background="new 0 0 174 148"
-        xml:space="preserve">
+    <svg style="display: none;" id="theSvg" viewBox="-120 -30 240 180" enable-background="new 0 0 174 148" xml:space="preserve">
         <defs>
             <filter id="f" filterUnits="userSpaceOnUse" x="-120" y="-30" width="120%" height="120%">
                 <feGaussianBlur in="SourceAlpha" stdDeviation="5" result="blur"></feGaussianBlur>
@@ -774,7 +718,6 @@
     " />
             <path id="partialPath" />
         </defs>
-
         <text dy="-2">
             <textPath style="font-family: fantasy;" xlink:href="#partialPath" startOffset="12">
                 🌹Happy Women's Day 20-10
@@ -782,9 +725,7 @@
                 With Love!🌹
             </textPath>
         </text>
-
-        <use id="useThePath" xlink:href="#partialPath" stroke="white" stroke-width=".5" stroke-opacity=".5" fill="none"
-            style="display:none;" />
+        <use id="useThePath" xlink:href="#partialPath" stroke="white" stroke-width=".5" stroke-opacity=".5" fill="none" style="display:none;" />
     </svg>
 
     <div id="castle" style="display: none;">
@@ -813,8 +754,7 @@
             <path class="leafOne" d="M124.302,328.222c-2.466-2.901-5.036-5.334-7.648-7.212c-1.884-1.354-4.49-1.207-6.201,0.36
                                     c-32.608,29.866-18.892,84.017,24.01,94.752c2.251,0.563,4.612-0.548,5.624-2.636c0.407-0.841,0.781-1.732,1.138-2.648
                                     C111.438,394.378,103.302,355.204,124.302,328.222z" />
-            <path class="stickLine"
-                d="M337.625,212.314c2.37-3.44,1.501-8.149-1.939-10.519c-3.44-2.369-8.15-1.501-10.519,1.939
+            <path class="stickLine" d="M337.625,212.314c2.37-3.44,1.501-8.149-1.939-10.519c-3.44-2.369-8.15-1.501-10.519,1.939
                                      c-19.493,28.304-43.492,60.076-72.147,92.853l-2.542-30.875c-0.343-4.163-4-7.261-8.158-6.917c-4.163,0.343-7.26,3.995-6.917,8.158
                                      l3.721,45.196C172.176,385.546,93.558,449.444,4.053,496.37c-3.699,1.94-5.127,6.512-3.187,10.211
                                      c1.352,2.579,3.983,4.054,6.705,4.054c1.183,0,2.385-0.279,3.505-0.867c63.84-33.47,124.784-76.962,181.511-129.479
@@ -842,8 +782,7 @@
                                  c21.533,31.149,7.895,59.383-14.633,90.009l0.071,0.029c-16.953,26.497-7.863,61.237,18.513,76.865
                                  c3.932,2.33,8.219,4.207,12.806,5.537c6.757,1.959,13.752,2.469,20.787,1.514l1.017-0.138l-0.367-0.959
                                  C330.327,183.817,333.08,162.625,343.8,146.676z" />
-            <path class="rose4"
-                d="M510.726,141.7c-3.917-4.747-39.75-46.26-91.009-41.792c-21.664,2.405-52.653,12.308-77.277,45.856
+            <path class="rose4" d="M510.726,141.7c-3.917-4.747-39.75-46.26-91.009-41.792c-21.664,2.405-52.653,12.308-77.277,45.856
                                  c-13.392,19.922-16.495,52.272,4.132,72.986c3.371,3.385,7.075,6.243,11.008,8.573c26.325,15.597,61.186,6.961,76.309-20.683
                                  l0.077,0.062c15.307-34.399,34.961-59.933,71.9-56.082C510.802,151.136,513.867,145.507,510.726,141.7z M370.903,162.627c27.904-38.017,75.307-57.751,121.144-38.743
                                  c-16.072-12.613-41.381-26.674-72.329-23.977c-21.664,2.405-52.653,12.308-77.277,45.856c-13.392,19.922-16.495,52.272,4.132,72.986
@@ -886,19 +825,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 
     <script>
-        let rid = null; // request animation id
+        let rid = null;
         const SVG_NS = "http://www.w3.org/2000/svg";
         const pathlength = shape.getTotalLength();
-
-        let t = 0; // at the begining of the path
+        let t = 0;
         let lengthAtT = pathlength * t;
-
         let d = shape.getAttribute("d");
-
-        // 1. build the d array
-        let n = d.match(/C/gi).length; // how many times
-
-        let pos = 0; // the position, used to find the indexOf the nth C
+        let n = d.match(/C/gi).length;
+        let pos = 0;
 
         class subPath {
             constructor(d) {
@@ -906,24 +840,22 @@
                 this.get_PointsRy();
                 this.previous = subpaths.length > 0 ? subpaths[subpaths.length - 1] : null;
                 this.measurePath();
-                this.get_M_Point(); //lastPoint
+                this.get_M_Point();
                 this.lastCubicBezier;
                 this.get_lastCubicBezier();
             }
 
             get_PointsRy() {
                 this.pointsRy = [];
-                let temp = this.d.split(/[A-Z,a-z\s,]/).filter(v => v); // remove empty elements
+                let temp = this.d.split(/[A-Z,a-z\s,]/).filter(v => v);
                 temp.map(item => {
                     this.pointsRy.push(parseFloat(item));
-                }); //this.pointsRy numbers not strings
+                });
             }
 
             measurePath() {
                 let path = document.createElementNS(SVG_NS, "path");
                 path.setAttributeNS(null, "d", this.d);
-                // no need to append it to the SVG
-                // the lengths of every path in dry
                 this.pathLength = path.getTotalLength();
             }
 
@@ -956,23 +888,16 @@
         }
 
         let subpaths = [];
-
-        // create new subPaths
         for (let i = 0; i < n; i++) {
-            // finds the of nth C in d
             let newpos = d.indexOf("C", pos + 1);
             if (i > 0) {
-                // if it's not the first C
                 let sPath = new subPath(d.substring(0, newpos));
                 subpaths.push(sPath);
             }
-            //change the value of the position pos
             pos = newpos;
         }
-        // at the end add d to the subpaths array
         subpaths.push(new subPath(d));
 
-        // 2. get the index of the bezierLengths where the point at t is
         let index;
         for (index = 0; index < subpaths.length; index++) {
             if (subpaths[index].pathLength >= lengthAtT) {
@@ -984,8 +909,7 @@
             let T;
             lengthAtT = pathlength * t;
             if (index > 0) {
-                T =
-                    (lengthAtT - subpaths[index].previous.pathLength) /
+                T = (lengthAtT - subpaths[index].previous.pathLength) /
                     (subpaths[index].pathLength - subpaths[index].previous.pathLength);
             } else {
                 T = lengthAtT / subpaths[index].pathLength;
@@ -994,29 +918,18 @@
         }
 
         let T = get_T(t, index);
-
         let newPoints = getBezierPoints(T, subpaths[index].lastCubicBezier);
-
         drawCBezier(newPoints, partialPath, index);
 
         function getBezierPoints(t, points) {
             let helperPoints = [];
-
-            // helper points 0,1,2
             for (let i = 1; i < 4; i++) {
-                //points.length must be 4 !!!
                 let p = lerp(points[i - 1], points[i], t);
                 helperPoints.push(p);
             }
-
-            // helper points 3,4
             helperPoints.push(lerp(helperPoints[0], helperPoints[1], t));
             helperPoints.push(lerp(helperPoints[1], helperPoints[2], t));
-
-            // helper point 5 is where the first Bézier ends and where the second Bézier begins
             helperPoints.push(lerp(helperPoints[3], helperPoints[4], t));
-
-            // points for the dynamic bézier
             let firstBezier = [
                 points[0],
                 helperPoints[0],
@@ -1028,22 +941,19 @@
 
         function lerp(A, B, t) {
             let ry = [
-                (B[0] - A[0]) * t + A[0], //x
-                (B[1] - A[1]) * t + A[1] //y
+                (B[0] - A[0]) * t + A[0],
+                (B[1] - A[1]) * t + A[1]
             ];
             return ry;
         }
 
         function drawCBezier(points, path, index) {
             let d;
-
             if (index > 0) {
                 d = subpaths[index].previous.d;
             } else {
                 d = `M${points[0][0]},${points[0][1]} C`;
             }
-
-            // points.length == 4
             for (let i = 1; i < 4; i++) {
                 d += ` ${points[i][0]},${points[i][1]} `;
             }
@@ -1055,6 +965,17 @@
             document.getElementById('rose-t').style.display = 'none';
             document.getElementById('castle').style.display = 'none';
             document.getElementById('theSvg').style.display = 'none';
+            // Attempt to autoplay music
+            const audio = document.getElementById('backgroundMusic');
+            const playPromise = audio.play();
+            if (playPromise !== undefined) {
+                playPromise.catch(error => {
+                    console.log("Autoplay was prevented:", error);
+                    // Fallback: Show a message or rely on user interaction
+                    const playButton = document.querySelector('.music-control button[onclick*="play"]');
+                    playButton.style.display = 'block'; // Ensure play button is visible
+                });
+            }
         }
 
         function selectFriend(friend) {
@@ -1076,7 +997,7 @@
                     contentLetter.textContent = "Hôm nay là ngày 20/10, chúc bạn Diệp luôn trẻ trung, xinh đẹp và tràn đầy năng lượng!";
                     break;
             }
-            photoElement.classList.add('fade-in'); // Thêm hiệu ứng fade-in khi ảnh xuất hiện
+            photoElement.classList.add('fade-in');
             photoElement.style.display = 'block';
             setTimeout(() => {
                 document.querySelector("#text-click").style.display = "inherit";
@@ -1106,9 +1027,120 @@
                 }
             };
         }
-    </script>
 
-    <script>
+        // .textLetter text h2
+        let indexText = 0;
+        let textLetter = document.querySelector('.textLetter h2');
+        const textLetterH2 = "Gửi bạn!";
+        let timoutTextLetter;
+
+        function textCharLetter() {
+            if (indexText < textLetterH2.length) {
+                textLetter.textContent += textLetterH2[indexText];
+                indexText++;
+                setTimeout(textCharLetter, 100);
+            } else {
+                clearTimeout(timoutTextLetter);
+            }
+        }
+
+        function startTextAnimation() {
+            indexText = 0;
+            textLetter.textContent = '';
+            timoutTextLetter = setTimeout(textCharLetter, 100);
+        }
+
+        let indexTextContent = 0;
+        let textLetterContent = document.querySelector('.contentLetter');
+        let timoutTextLetterContent;
+
+        function textCharLetterContent() {
+            if (indexTextContent < textLetterContent.textContent.length) {
+                indexTextContent++;
+                setTimeout(textCharLetterContent, 1);
+            }
+        }
+
+        function startContentAnimation() {
+            indexTextContent = 0;
+            timoutTextLetterContent = setTimeout(textCharLetterContent, 1);
+        }
+
+        $(document).ready(function () {
+            $('.valentines').mouseenter(function () {
+                $('.card').stop().animate({
+                    top: '-90px'
+                }, 'slow');
+            }).mouseleave(function () {
+                $('.card').stop().animate({
+                    top: 0
+                }, 'slow');
+            });
+
+            $('.card').click(function () {
+                $('.wrapperLetterForm').fadeIn();
+                startTextAnimation();
+                startContentAnimation();
+            });
+
+            $('.fa-xmark').click(function () {
+                $('.wrapperLetterForm').css('display', 'none');
+            });
+        });
+
+        var leafOne = document.querySelector('.leafOne');
+        var stickLine = document.querySelector('.stickLine');
+        var leafTwo = document.querySelector('.leafTwo');
+        var leafS1 = document.querySelector('.leafS1');
+        var rose1 = document.querySelector('.rose1');
+        var rose2 = document.querySelector('.rose2');
+        var rose3 = document.querySelector('.rose3');
+        var rose4 = document.querySelector('.rose4');
+
+        var lineDrawing = anime({
+            targets: [leafOne, stickLine, leafTwo, leafS1, rose1, rose2, rose3, rose4],
+            strokeDashoffset: [anime.setDashoffset, 0],
+            easing: 'easeInOutCubic',
+            duration: 4000,
+            begin: function (anim) {
+                leafOne.setAttribute("stroke", "black");
+                leafOne.setAttribute("fill", "none");
+                leafTwo.setAttribute("stroke", "black");
+                leafTwo.setAttribute("fill", "none");
+                stickLine.setAttribute("stroke", "black");
+                stickLine.setAttribute("fill", "none");
+                leafS1.setAttribute("stroke", "black");
+                leafS1.setAttribute("fill", "none");
+                rose1.setAttribute("stroke", "black");
+                rose1.setAttribute("fill", "none");
+                rose2.setAttribute("stroke", "black");
+                rose2.setAttribute("fill", "none");
+                rose3.setAttribute("stroke", "black");
+                rose3.setAttribute("fill", "none");
+                rose4.setAttribute("stroke", "black");
+                rose4.setAttribute("fill", "none");
+            },
+            complete: function (anim) {
+                leafOne.setAttribute("fill", "#9CDD05");
+                leafOne.setAttribute("stroke", "none");
+                leafTwo.setAttribute("fill", "#9CDD05");
+                leafTwo.setAttribute("stroke", "none");
+                stickLine.setAttribute("fill", "#83AA2E");
+                stickLine.setAttribute("stroke", "none");
+                leafS1.setAttribute("fill", "#9CDD05");
+                leafS1.setAttribute("stroke", "none");
+                rose1.setAttribute("fill", "#F37D79");
+                rose1.setAttribute("stroke", "none");
+                rose2.setAttribute("fill", "#D86666");
+                rose2.setAttribute("stroke", "none");
+                rose3.setAttribute("fill", "#F37D79");
+                rose3.setAttribute("stroke", "none");
+                rose4.setAttribute("fill", "#D86666");
+                rose4.setAttribute("stroke", "none");
+            },
+            autoplay: true,
+        });
+
         (() => {
             setTimeout(() => {
                 document.querySelector("#text-click").style.display = "inherit";
@@ -1207,137 +1239,5 @@
             ].forEach((o) => CreateMagicDust(...o));
         })();
     </script>
-
-    <script>
-        // .textLetter text h2
-        let indexText = 0;
-        let textLetter = document.querySelector('.textLetter h2');
-        const textLetterH2 = "Gửi bạn!";
-        let timoutTextLetter;
-
-        function textCharLetter() {
-            if (indexText < textLetterH2.length) {
-                textLetter.textContent += textLetterH2[indexText];
-                indexText++;
-                setTimeout(textCharLetter, 100);
-            } else {
-                clearTimeout(timoutTextLetter);
-            }
-        }
-
-        function startTextAnimation() {
-            indexText = 0;
-            textLetter.textContent = '';
-            timoutTextLetter = setTimeout(textCharLetter, 100);
-        }
-
-        // chữ của thư bạn muốn gửi
-        let indexTextContent = 0;
-        let textLetterContent = document.querySelector('.contentLetter');
-        let timoutTextLetterContent;
-
-        function textCharLetterContent() {
-            if (indexTextContent < textLetterContent.textContent.length) {
-                indexTextContent++;
-                setTimeout(textCharLetterContent, 1);
-            }
-        }
-
-        function startContentAnimation() {
-            indexTextContent = 0;
-            timoutTextLetterContent = setTimeout(textCharLetterContent, 1);
-        }
-
-        $(document).ready(function () {
-            $('.valentines').mouseenter(function () {
-                $('.card').stop().animate({
-                    top: '-90px'
-                }, 'slow');
-            }).mouseleave(function () {
-                $('.card').stop().animate({
-                    top: 0
-                }, 'slow');
-            });
-
-            $('.card').click(function () {
-                $('.wrapperLetterForm').fadeIn();
-                startTextAnimation();
-                startContentAnimation();
-            });
-
-            $('.fa-xmark').click(function () {
-                $('.wrapperLetterForm').css('display', 'none');
-            });
-        });
-        var leafOne = document.querySelector('.leafOne');
-        var stickLine = document.querySelector('.stickLine');
-        var leafTwo = document.querySelector('.leafTwo');
-        var leafS1 = document.querySelector('.leafS1');
-        var rose1 = document.querySelector('.rose1');
-        var rose2 = document.querySelector('.rose2');
-        var rose3 = document.querySelector('.rose3');
-        var rose4 = document.querySelector('.rose4');
-
-        var lineDrawing = anime({
-            targets: [leafOne, stickLine, leafTwo, leafS1, rose1, rose2, rose3, rose4],
-            strokeDashoffset: [anime.setDashoffset, 0],
-            easing: 'easeInOutCubic',
-            duration: 4000,
-            begin: function (anim) {
-                //Leaf One
-                leafOne.setAttribute("stroke", "black");
-                leafOne.setAttribute("fill", "none");
-                // Leaf Two
-                leafTwo.setAttribute("stroke", "black");
-                leafTwo.setAttribute("fill", "none");
-                //Stick
-                stickLine.setAttribute("stroke", "black");
-                stickLine.setAttribute("fill", "none");
-                // Leaf S1
-                leafS1.setAttribute("stroke", "black");
-                leafS1.setAttribute("fill", "none");
-                //Rose One
-                rose1.setAttribute("stroke", "black");
-                rose1.setAttribute("fill", "none");
-                //Rose Two
-                rose2.setAttribute("stroke", "black");
-                rose2.setAttribute("fill", "none");
-                //Rose Three
-                rose3.setAttribute("stroke", "black");
-                rose3.setAttribute("fill", "none");
-                //Rose Four
-                rose4.setAttribute("stroke", "black");
-                rose4.setAttribute("fill", "none");
-            },
-            complete: function (anim) {
-                //Leaf One
-                leafOne.setAttribute("fill", "#9CDD05");
-                leafOne.setAttribute("stroke", "none");
-                //Leaf Two 
-                leafTwo.setAttribute("fill", "#9CDD05");
-                leafTwo.setAttribute("stroke", "none");
-                //Stick
-                stickLine.setAttribute("fill", "#83AA2E");
-                stickLine.setAttribute("stroke", "none");
-                // Leaf S1
-                leafS1.setAttribute("fill", "#9CDD05");
-                leafS1.setAttribute("stroke", "none");
-                // Rose 1
-                rose1.setAttribute("fill", "#F37D79");
-                rose1.setAttribute("stroke", "none");
-                // Rose 2
-                rose2.setAttribute("fill", "#D86666");
-                rose2.setAttribute("stroke", "none");
-                // Rose 3
-                rose3.setAttribute("fill", "#F37D79");
-                rose3.setAttribute("stroke", "none");
-                // Rose 4
-                rose4.setAttribute("fill", "#D86666");
-                rose4.setAttribute("stroke", "none");
-            },
-            autoplay: true,
-        });
-    </script>
 </body>
-
 </html>
