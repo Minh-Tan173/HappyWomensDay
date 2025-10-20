@@ -972,20 +972,22 @@
             document.getElementById('rose-t').style.display = 'flex';
             let photoElement = document.getElementById('letterPhoto');
             let contentLetter = document.querySelector('.contentLetter');
+            let message;
             switch (friend) {
                 case 'Hue':
                     photoElement.src = './ImageLetter/HueLetter.png';
-                    contentLetter.textContent = "Nhân ngày 20/10 thật đặc biệt, mình gửi đến Huê lời chúc tràn đầy yêu thương! Chúc Huê luôn rạng ngời như đóa hoa tươi thắm, cuộc sống ngập tràn niềm vui và hạnh phúc. Mong công việc của Huê thuận buồm xuôi gió, không còn lo lắng về lương chậm, và mỗi ngày đều tràn đầy năng lượng tích cực. Hãy luôn tỏa sáng và tận hưởng những khoảnh khắc đẹp nhất nhé, Huê! 🌸";
+                    message = "Nhân ngày 20/10 thật đặc biệt, mình gửi đến Huê lời chúc tràn đầy yêu thương! Chúc Huê luôn rạng ngời như đóa hoa tươi thắm, cuộc sống ngập tràn niềm vui và hạnh phúc. Mong công việc của Huê thuận buồm xuôi gió, không còn lo lắng về lương chậm, và mỗi ngày đều tràn đầy năng lượng tích cực. Hãy luôn tỏa sáng và tận hưởng những khoảnh khắc đẹp nhất nhé, Huê! 🌸";
                     break;
                 case 'Oanh':
                     photoElement.src = './ImageLetter/OanhLetter.png';
-                    contentLetter.textContent = "Nhân ngày 20/10 rực rỡ, mình gửi đến Oanh những lời chúc thật ấm áp! Chúc Oanh luôn hạnh phúc, nụ cười rạng ngời như ánh nắng ban mai. Mong công việc của Oanh ngày càng nhẹ nhàng, suôn sẻ, bớt những lúc than vãn để thay bằng những khoảnh khắc vui tươi. Hãy luôn tỏa sáng và tận hưởng ngày thật ý nghĩa nhé, Oanh! 🌺";
+                    message = "Nhân ngày 20/10 rực rỡ, mình gửi đến Oanh những lời chúc thật ấm áp! Chúc Oanh luôn hạnh phúc, nụ cười rạng ngời như ánh nắng ban mai. Mong công việc của Oanh ngày càng nhẹ nhàng, suôn sẻ, bớt những lúc than vãn để thay bằng những khoảnh khắc vui tươi. Hãy luôn tỏa sáng và tận hưởng ngày thật ý nghĩa nhé, Oanh! 🌺";
                     break;
                 case 'Diep':
                     photoElement.src = './ImageLetter/DiepLetter.png';
-                    contentLetter.textContent = "Nhân ngày 20/10 rực rỡ, mình gửi đến Diệp những lời chúc thật nồng ấm! Chúc Diệp luôn trẻ trung, xinh đẹp rạng ngời và tràn đầy năng lượng như những đóa hoa tươi thắm. Mong mọi điều trong cuộc sống của Diệp đều thuận lợi, ngập tràn niềm vui và những khoảnh khắc hạnh phúc. Hãy tiếp tục tỏa sáng và tận hưởng ngày thật đặc biệt nhé, Diệp! 🌼";
+                    message = "Nhân ngày 20/10 rực rỡ, mình gửi đến Diệp những lời chúc thật nồng ấm! Chúc Diệp luôn trẻ trung, xinh đẹp rạng ngời và tràn đầy năng lượng như những đóa hoa tươi thắm. Mong mọi điều trong cuộc sống của Diệp đều thuận lợi, ngập tràn niềm vui và những khoảnh khắc hạnh phúc. Hãy tiếp tục tỏa sáng và tận hưởng ngày thật đặc biệt nhé, Diệp! 🌼";
                     break;
             }
+            contentLetter.textContent = ''; // Clear previous content
             photoElement.classList.add('fade-in');
             photoElement.style.display = 'block';
             // Start background music after user interaction
@@ -1023,6 +1025,8 @@
                     drawCBezier(newPoints, partialPath, index);
                 }
             };
+            // Start content animation after setting the message
+            startContentAnimation(message);
         }
 
         let indexText = 0;
@@ -1050,16 +1054,20 @@
         let textLetterContent = document.querySelector('.contentLetter');
         let timoutTextLetterContent;
 
-        function textCharLetterContent() {
-            if (indexTextContent < textLetterContent.textContent.length) {
+        function textCharLetterContent(message) {
+            if (indexTextContent < message.length) {
+                textLetterContent.textContent += message[indexTextContent];
                 indexTextContent++;
-                setTimeout(textCharLetterContent, 1);
+                setTimeout(() => textCharLetterContent(message), 30); // Adjusted timing for smoother effect
+            } else {
+                clearTimeout(timoutTextLetterContent);
             }
         }
 
-        function startContentAnimation() {
+        function startContentAnimation(message) {
             indexTextContent = 0;
-            timoutTextLetterContent = setTimeout(textCharLetterContent, 1);
+            textLetterContent.textContent = '';
+            timoutTextLetterContent = setTimeout(() => textCharLetterContent(message), 30);
         }
 
         $(document).ready(function () {
@@ -1076,7 +1084,7 @@
             $('.card').click(function () {
                 $('.wrapperLetterForm').fadeIn();
                 startTextAnimation();
-                startContentAnimation();
+                startContentAnimation(textLetterContent.textContent); // Use current content
             });
 
             $('.fa-xmark').click(function () {
