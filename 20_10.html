@@ -627,6 +627,30 @@
             width: 100%;
             border-radius: 10px;
         }
+
+        /* Style cho điều khiển nhạc */
+        .music-control {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 10000;
+        }
+
+        .music-control button {
+            background: #FF6666;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .music-control button:hover {
+            background: #FF3333;
+        }
     </style>
 
     <!-- Style cho bảng lựa chọn - scene riêng biệt -->
@@ -714,7 +738,7 @@
     </style>
 </head>
 
-<body onload="showSelectionModal()">
+<body onload="showSelectionModal(); document.getElementById('backgroundMusic').play();">
     <!-- Scene bảng lựa chọn -->
     <div class="selection-modal" id="selectionModal">
         <div class="selection-box">
@@ -723,6 +747,13 @@
             <button onclick="selectFriend('Oanh')">Oanh</button>
             <button onclick="selectFriend('Diep')">Diệp</button>
         </div>
+    </div>
+
+    <!-- Nhạc nền -->
+    <audio id="backgroundMusic" src="./LoveStory_Indila.mp3" loop></audio>
+    <div class="music-control">
+        <button onclick="document.getElementById('backgroundMusic').pause();"><i class="fas fa-pause"></i></button>
+        <button onclick="document.getElementById('backgroundMusic').play();"><i class="fas fa-play"></i></button>
     </div>
 
     <svg style="display: none;" id="theSvg" viewBox="-120 -30 240 180" enable-background="new 0 0 174 148"
