@@ -695,7 +695,7 @@
         </div>
     </div>
 
-    <audio id="backgroundMusic" src="./LoveStory_Indila.mp3" loop autoplay></audio>
+    <audio id="backgroundMusic" src="./LoveStory_Indila.mp3" loop></audio>
     <div class="music-control">
         <button onclick="document.getElementById('backgroundMusic').pause();"><i class="fas fa-pause"></i></button>
         <button onclick="document.getElementById('backgroundMusic').play();"><i class="fas fa-play"></i></button>
@@ -965,17 +965,6 @@
             document.getElementById('rose-t').style.display = 'none';
             document.getElementById('castle').style.display = 'none';
             document.getElementById('theSvg').style.display = 'none';
-            // Attempt to autoplay music
-            const audio = document.getElementById('backgroundMusic');
-            const playPromise = audio.play();
-            if (playPromise !== undefined) {
-                playPromise.catch(error => {
-                    console.log("Autoplay was prevented:", error);
-                    // Fallback: Show a message or rely on user interaction
-                    const playButton = document.querySelector('.music-control button[onclick*="play"]');
-                    playButton.style.display = 'block'; // Ensure play button is visible
-                });
-            }
         }
 
         function selectFriend(friend) {
@@ -999,6 +988,14 @@
             }
             photoElement.classList.add('fade-in');
             photoElement.style.display = 'block';
+            // Start background music after user interaction
+            const audio = document.getElementById('backgroundMusic');
+            const playPromise = audio.play();
+            if (playPromise !== undefined) {
+                playPromise.catch(error => {
+                    console.log("Failed to play music:", error);
+                });
+            }
             setTimeout(() => {
                 document.querySelector("#text-click").style.display = "inherit";
             }, 4000);
@@ -1028,7 +1025,6 @@
             };
         }
 
-        // .textLetter text h2
         let indexText = 0;
         let textLetter = document.querySelector('.textLetter h2');
         const textLetterH2 = "Gửi bạn!";
